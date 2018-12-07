@@ -46,7 +46,7 @@ class ProjConan(ConanFile):
 '''
 
         patch(patch_string=patch_content2, base_path=self.ZIP_FOLDER_NAME)
-        cmake = CMake(self.settings)
+        cmake = CMake(self)
         if self.settings.os == "Windows":
             self.run("IF not exist _build mkdir _build")
         else:
